@@ -1,5 +1,7 @@
 package amin;
 
+import java.util.Arrays;
+
 public class ArrayProcessing {
 
 	public static void main(String[] args) {
@@ -48,12 +50,17 @@ public class ArrayProcessing {
 				
 		
 		//reverse the array
-		System.out.println("\nReverse the array");
-		double[] A4 = A2;
-		for (int i=0; i<A4.length; i++){
-			A4[i] = A4[A4.length-i-1];
-			System.out.println("The " + i + " th value of the reversed array is "+ A4[i]);
+		System.out.println("\nExample 6, Reverse the array");
+		double[] A6 = A2;
+		System.out.println("The Original Array is " + Arrays.toString(A6));
+		int size = A6.length;
+		double[] reversedArray = new double[size];
+		for (int i=0; i<size; i++){
+			reversedArray[i] = A6[size-1-i];
+			System.out.println("index is " + i + " "+ size + " "+ reversedArray[i] + " "+ A6[i]);
+			//System.out.println("The " + i + "th value of the reversed array is "+ reversedArray[i]);	
 		}
+		System.out.println("The reversed Array is " + Arrays.toString(reversedArray));
 	}
 
 }
