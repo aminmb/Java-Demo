@@ -95,12 +95,12 @@ public class ArrayProcessing {
 		}
 		System.out.println ("The new Array after deletion is " + Arrays.toString(deletedArray));
 		
+		
 		//search for the value
 		System.out.println ("\nExample 9, search for the value, count the elements");
-		System.out.println ("The repeat index is");
-
 		double[] A9 = A2;
 		System.out.println ("The Original Array is " + Arrays.toString(A8));
+		System.out.println ("The repeat index is");
 		double[] elementArray = new double [A9.length];
 		int count = 0;
 		double element = 6.0;
