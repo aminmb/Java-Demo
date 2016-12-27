@@ -77,7 +77,7 @@ public class ArrayProcessing {
 				insertedArray[i]=A7[i-1];
 			}	
 		}
-		System.out.println ("The reversed Array is " + Arrays.toString(insertedArray));
+		System.out.println ("The new Array after insertion is " + Arrays.toString(insertedArray));
 		
 		
 		//delete an item
@@ -93,7 +93,7 @@ public class ArrayProcessing {
 				deletedArray[i]=A7[i+1];
 			}	
 		}
-		System.out.println ("The reversed Array is " + Arrays.toString(deletedArray));
+		System.out.println ("The new Array after deletion is " + Arrays.toString(deletedArray));
 		
 	}
 
