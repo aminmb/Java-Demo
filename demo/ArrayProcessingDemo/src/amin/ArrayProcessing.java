@@ -17,49 +17,69 @@ public class ArrayProcessing {
 		}
 		
 		// create an array with random values
-		System.out.println("\nExample 3, create an array with random values. (Between 1 and 10.)");
+		System.out.println ("\nExample 3, create an array with random values. (Between 1 and 10.)");
 		double[] A2 = new double [10];
 		for (int i=0; i<A2.length; i++){
 			A2[i]= Math.floor (Math.random()*10);
 		}
-		System.out.println("The random Array is " + Arrays.toString(A2));
+		System.out.println ("The random Array is " + Arrays.toString(A2));
 
 		
 		// find the maximum
-		System.out.println("\nExample 4, Find the maximum between elements and print the index");
+		System.out.println ("\nExample 4, Find the maximum between elements and print the index");
 		int index = 0;
 		double[] A3 = A2;
 		double max = A3[0];
-
 		for (int i=0; i< A3.length; i++){
 			if (A3[i]> max){
 				max = A3[i];
 				index = i;
 			}
 		}
-		System.out.println("The maximum is " + max + " and the index is "+ index);	
+		System.out.println ("The maximum is " + max + " and the index is "+ index);	
 		
 		
 		// find the average
-		System.out.println("\nExample 5, find the average of elements");
+		System.out.println ("\nExample 5, find the average of elements");
 		double sum = 0;
 		for (int i = 0; i< A2.length; i++){
 			sum = A2[i]+ sum;
 		}
 		double avg = sum / A2.length;
-		System.out.println("The average is " + avg + " , while the sum of elements is " + sum );
+		System.out.println ("The average is " + avg + " , while the sum of elements is " + sum );
 				
 		
 		//reverse the array
-		System.out.println("\nExample 6, Reverse the array");
+		System.out.println ("\nExample 6, Reverse the array");
 		double[] A6 = A2;
-		System.out.println("The Original Array is " + Arrays.toString(A6));
+		System.out.println ("The Original Array is " + Arrays.toString(A6));
 		int size = A6.length;
 		double[] reversedArray = new double[size];
 		for (int i=0; i<size; i++){
 			reversedArray[i] = A6[size-1-i];
 		}
-		System.out.println("The reversed Array is " + Arrays.toString(reversedArray));
+		System.out.println ("The reversed Array is " + Arrays.toString(reversedArray));
+		
+		
+		//insert an element
+		System.out.println ("\nExample 7, insert a new element (add 9 to the 6th element)");
+		double[] A7 = A2;
+		double[] insertedArray = new double[A2.length+1];
+		double newElement = 9.0;
+		int insertedIndex = 6;
+		System.out.println ("The Original Array is " + Arrays.toString(A7));
+		for (int i=0; i<A7.length+1; i++){
+			if (i<insertedIndex){
+				insertedArray[i]=A7[i];
+			} else if (i==insertedIndex){
+				insertedArray[insertedIndex]=newElement;
+			} else{
+				insertedArray[i]=A7[i-1];
+			}	
+		}
+		System.out.println ("The reversed Array is " + Arrays.toString(insertedArray));
+		
+		
 	}
 
 }
