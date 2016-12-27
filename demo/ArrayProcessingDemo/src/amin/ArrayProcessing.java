@@ -95,6 +95,26 @@ public class ArrayProcessing {
 		}
 		System.out.println ("The new Array after deletion is " + Arrays.toString(deletedArray));
 		
+		//search for the value
+		System.out.println ("\nExample 9, search for the value, count the elements");
+		System.out.println ("The repeat index is");
+
+		double[] A9 = A2;
+		System.out.println ("The Original Array is " + Arrays.toString(A8));
+		double[] elementArray = new double [A9.length];
+		int count = 0;
+		double element = 6.0;
+		for (int i=0; i< A9.length; i++){
+			if (A9[i]==element){
+				count++;
+				elementArray[i]=A9[i];
+				System.out.print(" " + i + ",");
+			}
+		}
+		System.out.println ("\nThe number of repeats is " + count);
+		System.out.println ("The Array only includes repeats is " + Arrays.toString(elementArray));
+
+
 	}
 
 }
