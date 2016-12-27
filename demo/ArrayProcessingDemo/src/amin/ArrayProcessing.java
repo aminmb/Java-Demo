@@ -80,6 +80,21 @@ public class ArrayProcessing {
 		System.out.println ("The reversed Array is " + Arrays.toString(insertedArray));
 		
 		
+		//delete an item
+		System.out.println ("\nExample 8, delete an element (the 6th element)");
+		double[] A8 = A2;
+		double[] deletedArray = new double[A2.length-1];
+		int deleteIndex = 6;
+		System.out.println ("The Original Array is " + Arrays.toString(A8));
+		for (int i=0; i<A8.length-1; i++){
+			if (i<deleteIndex){
+				deletedArray[i]=A8[i];
+			} else{
+				deletedArray[i]=A7[i+1];
+			}	
+		}
+		System.out.println ("The reversed Array is " + Arrays.toString(deletedArray));
+		
 	}
 
 }
